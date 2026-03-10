@@ -1,67 +1,65 @@
+# Face Recognition Using the KNN Algorithm
 
-# Prepoznavanje lica pomoću KNN algoritma
+This project implements a real-time face recognition system using a camera, the OpenCV library, the `face_recognition` library, and the K-Nearest Neighbors (KNN) algorithm. The system was developed as an academic project in the field of artificial intelligence.
 
-Ovaj projekat implementira sistem za prepoznavanje lica u realnom vremenu korišćenjem kamere, OpenCV biblioteke, `face_recognition` biblioteke i K najbližih suseda (KNN) algoritma. Sistem je razvijen kao akademski projekat iz oblasti veštačke inteligencije.
-
-## 🔧 Tehnologije
+## 🔧 Technologies
 
 - Python 3.x
 - OpenCV
 - face_recognition
 - NumPy
 
-## 📁 Struktura projekta
+## 📁 Project Structure
 
 ```
 projekat-knn/
-├── main.py                  # Snimanje i enkodiranje lica korisnika
-├── rec.py                   # Prepoznavanje lica u realnom vremenu
-├── haarcascade_frontalface_default.xml  # Model za detekciju lica
-├── data/                    # Folder sa enkodiranim .npy fajlovima
-├── README.md                # Opis projekta
-├── requirements.txt         # Spisak potrebnih Python biblioteka
+├── main.py                  # Recording and encoding user faces
+├── rec.py                   # Real-time face recognition
+├── haarcascade_frontalface_default.xml  # Face detection model
+├── data/                    # Folder with encoded .npy files
+├── README.md                # Project description
+├── requirements.txt         # List of required Python libraries
 ```
 
-## 📸 Funkcionalnosti
+## 📸 Features
 
-- Snimanje i enkodiranje lica korisnika
-- Čuvanje vektora karakteristika u `.npy` fajl
-- Učitavanje baze poznatih lica
-- Prepoznavanje lica pomoću ručno implementiranog KNN algoritma
-- Prikaz imena osobe iznad detektovanog lica
+- Recording and encoding user faces
+- Saving feature vectors to a `.npy` file
+- Loading the database of known faces
+- Face recognition using a manually implemented KNN algorithm
+- Displaying the person's name above the detected face
 
-## ▶️ Pokretanje
+## ▶️ Running the Project
 
-1. Instaliraj potrebne biblioteke:
-
+1. Install the required libraries:
 ```
 pip install -r requirements.txt
 ```
 
-2. Prvo pokreni `loadData.py` da uneseš i sačuvaš uzorke lica.
-   3. Zatim pokreni `recSystem.py` za prepoznavanje lica.
+2. First run `loadData.py` to capture and save face samples.
+3. Then run `recSystem.py` for face recognition.
 
 ## 📂 Dataset
 
-- `.npy` fajlovi se automatski kreiraju za svakog korisnika i čuvaju u `./data/` folderu.
-- Svaki fajl sadrži 20 enkodiranih uzoraka lica.
+- `.npy` files are automatically created for each user and saved in the `./data/` folder.
+- Each file contains 20 encoded face samples.
 
-## ⚠️ Napomena
+## ⚠️ Note
 
-- Potrebno je da `haarcascade_frontalface_default.xml` bude u istom folderu kao i skripte.
-- Aplikacija koristi standardnu web kameru (`device 0`).
+- The `haarcascade_frontalface_default.xml` file must be in the same folder as the scripts.
+- The application uses the default webcam (`device 0`).
 
-## 🖼️ Primeri prepoznavanja lica
+## 🖼️ Face Recognition Examples
 
-U nastavku su prikazane slike koje ilustruju rad aplikacije u realnom vremenu:
+Below are images illustrating the application running in real time:
 
-![Prepoznavanje lica u realnom vremenu](images/rec1.png)
-![Prepoznavanje lica u realnom vremenu](images/rec2.png)
+![Real-time face recognition](images/rec1.png)
+![Real-time face recognition](images/rec2.png)
 
-Ova slika prikazuje primer gde aplikacija detektuje lice korisnika putem kamere i na osnovu prethodno snimljenih uzoraka uspešno prepoznaje osobu korišćenjem KNN algoritma.
+These images show an example where the application detects a user's face via the camera and successfully identifies the person based on previously recorded samples using the KNN algorithm.
 
-## 📄 Autor
+## 📄 Author
 
 Milutin Jovanović  
-Elektronski fakultet, Univerzitet u Nišu  
-2024/2025 - Veštačka inteligencija
+Faculty of Electronic Engineering, University of Niš  
+2024/2025 – Artificial Intelligence
